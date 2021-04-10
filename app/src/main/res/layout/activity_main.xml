@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#616161"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="0"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/resultcolor"
+            android:textColorHint="@color/white"
+            android:textSize="30sp" />
+
+        <HorizontalScrollView
+            android:id="@+id/hzw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="0"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="30sp" />
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="9">
+
+        <GridLayout
+            android:id="@+id/GridLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="5"
+            android:orientation="horizontal">
+
+            <!--            Row 1 -->
+            <!--            Column1-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/sin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="sin"
+                    android:text="sin"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <!--            Column2-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/cos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="cos"
+                    android:text="cos"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column3-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/tan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="tan"
+                    android:text="tan"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column4-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/log"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="log"
+                    android:text="log"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column5-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/backspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="log"
+                    android:text="C"
+                    android:textColor="#E4131111"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+            <!--            Row 2 -->
+            <!--            Column1-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/sinh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="sinh"
+                    android:text="sinh"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <!--            Column2-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/cosh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="cosh"
+                    android:text="cosh"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column3-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/tanh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="tanh"
+                    android:text="tanh"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column4-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/plusminus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="plusminus"
+                    android:text="\u00B1"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column5-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/nthroot"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="nthroot"
+                    android:text="n\u221aX"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <!--            Row 3 -->
+            <!--            Column1-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/bin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="bin"
+                    android:text="BIN"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column2-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/hex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="hex"
+                    android:text="HEX"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column3-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/oct"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="oct"
+                    android:text="OCT"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column4-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/percent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="percent"
+                    android:text="%"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column5-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/onebyx"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="onebyx"
+                    android:text="1/x"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <!--            Row 4 -->
+            <!--            Column1-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/divide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="divide"
+                    android:text="/"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column2-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/multiply"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="multiply"
+                    android:text="*"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column3-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="sub"
+                    android:text="-"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column4-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="add"
+                    android:text="+"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column5-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/ln"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="ln"
+                    android:text="ln"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <!--            Row 5 -->
+            <!--            Column1-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/seven"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_7"
+                    android:text="7"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column2-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/eight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_8"
+                    android:text="8"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column3-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/nine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_9"
+                    android:text="9"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column4-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/bracketopen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="bracopen"
+                    android:text="("
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column5-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/bracketclose"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="bracclose"
+                    android:text=")"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Row 6 -->
+            <!--            Column1-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/four"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_4"
+                    android:text="4"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column2-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/five"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_5"
+                    android:text="5"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column3-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/six"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_6"
+                    android:text="6"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column4-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:gravity="center"
+                android:background="@drawable/cell_border"
+                android:onClick="root">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:onClick="root"
+                    android:text="2"
+                    android:textColor="#E4131111"
+                    android:textSize="10sp" />
+                <TextView
+                    android:id="@+id/root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:onClick="root"
+                    android:text="\u221a"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column5-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/factorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="factorial"
+                    android:text="!"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <!--            Row 7 -->
+            <!--            Column1-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_1"
+                    android:text="1"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column2-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_2"
+                    android:text="2"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column3-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/three"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_3"
+                    android:text="3"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column4-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/power"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="power"
+                    android:text="^"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column5-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/pi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="pi"
+                    android:text="\u03C0"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <!--            Row 8 -->
+            <!--            Column1-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/zero"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="txt_0"
+                    android:text="0"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column3-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-15dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="dot"
+                    android:text="."
+                    android:textColor="#E4131111"
+                    android:textSize="40sp" />
+            </LinearLayout>
+
+            <!--            Column4-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/exponential"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="expo"
+                    android:text="e"
+                    android:textColor="#E4131111"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--            Column5-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/cell_border">
+
+                <TextView
+                    android:id="@+id/equalsto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="equals"
+                    android:text="="
+                    android:textColor="#FF9100"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+
+        </GridLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
